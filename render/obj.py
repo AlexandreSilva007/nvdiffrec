@@ -52,8 +52,6 @@ def load_obj(filename, clear_ks=True, mtl_override=None):
                 all_materials += material.load_mtl(os.path.join(obj_path, line.split()[1]), clear_ks) # Read in entire material library
     else:
         all_materials += material.load_mtl(mtl_override)
-    print("all_materials")
-    print(all_materials)
     # load vertices
     vertices, texcoords, normals  = [], [], []
     for line in lines:
@@ -78,14 +76,11 @@ def load_obj(filename, clear_ks=True, mtl_override=None):
             continue
 
         prefix = line.split()[0].lower()
-        print(prefix)
         if prefix == 'usemtl': # Track used materials
             mat = _find_mat(all_materials, line.split()[1])
-            print(mat)
             if not mat in used_materials:
                 used_materials.append(mat)
             activeMatIdx = used_materials.index(mat)
-            print(used_materials)
         elif prefix == 'f': # Parse face
             vs = line.split()[1:]
             nv = len(vs)
