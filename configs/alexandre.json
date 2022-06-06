@@ -1,5 +1,5 @@
 {
-    "ref_mesh"  : "data/alexandre/allosaurus.obj",
+    "ref_mesh"  : "data/alexandre/dinotext.obj",
     "random_textures": true,
     "iter": 1000,
     "save_interval": 100,
@@ -12,5 +12,5 @@
     "env_scale" : 2.0,
     "background": "white",
     "validate" : false,
-    "out_dir": "allosaurus"
+    "out_dir": "dinotext"
 }
