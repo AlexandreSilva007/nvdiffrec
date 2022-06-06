@@ -77,11 +77,13 @@ def load_obj(filename, clear_ks=True, mtl_override=None):
             continue
 
         prefix = line.split()[0].lower()
+        print(prefix)
         if prefix == 'usemtl': # Track used materials
             mat = _find_mat(all_materials, line.split()[1])
             if not mat in used_materials:
                 used_materials.append(mat)
             activeMatIdx = used_materials.index(mat)
+            print(used_materials)
         elif prefix == 'f': # Parse face
             vs = line.split()[1:]
             nv = len(vs)
