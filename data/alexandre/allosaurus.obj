@@ -9,7 +9,7 @@
 # Faces: 13192
 #
 ####
-mtllib ./allosaurus.obj.mtl
+mtllib ./allosaurus.mtl
 
 vn -0.023573 0.290365 0.956626
 v 0.244977 0.092592 0.072151
